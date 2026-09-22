@@ -11,6 +11,8 @@ int main(void) {
 
     assert(multiply(4, 5) == 20);
     assert(multiply(-4, 5) == -20);
+    assert(multiply(0, 99) == 0);
+    assert(multiply(-4, -5) == 20);
 
     return 0;
 }

@@ -14,10 +14,10 @@ all: $(APP)
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-$(APP): $(SRC) include/math_utils.h | $(BIN_DIR)
+$(APP): $(SRC) include/math_utils.h Makefile | $(BIN_DIR)
 	$(CC) $(CFLAGS) $(SRC) -o $(APP)
 
-$(TEST_BIN): tests/test_math_utils.c src/math_utils.c include/math_utils.h | $(BIN_DIR)
+$(TEST_BIN): tests/test_math_utils.c src/math_utils.c include/math_utils.h Makefile | $(BIN_DIR)
 	$(CC) $(CFLAGS) tests/test_math_utils.c src/math_utils.c -o $(TEST_BIN)
 
 test: $(TEST_BIN)
