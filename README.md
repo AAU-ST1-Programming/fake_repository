@@ -28,3 +28,9 @@ Kør tests:
 ```bash
 make test
 ```
+
+Ryd build-filer:
+
+```bash
+make clean
+```
